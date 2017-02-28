@@ -5,19 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.youssefalaa.footballscorekeeper.MainActivity">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/football"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/football" />
 
     <LinearLayout
         android:id="@+id/Teams"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="horizontal"
-       >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -31,7 +31,7 @@
                 android:gravity="center_horizontal"
                 android:text="Team A"
                 android:textColor="@android:color/white"
-                android:textSize="32sp"/>
+                android:textSize="32sp" />
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -39,8 +39,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="0"
-                android:textSize="64sp"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/white"
+                android:textSize="64sp" />
         </LinearLayout>
 
 
@@ -55,8 +55,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="Team B"
-                android:textSize="32sp"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
 
             <TextView
                 android:id="@+id/team_b_score"
@@ -64,197 +64,187 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="0"
-                android:textSize="64sp"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/white"
+                android:textSize="64sp" />
         </LinearLayout>
 
 
-
     </LinearLayout>
+
     <View
         android:layout_width="wrap_content"
         android:layout_height="3dp"
-        android:background="@android:color/darker_gray"
-        android:layout_above="@+id/scores"/>
+        android:layout_above="@+id/scores"
+        android:background="@android:color/darker_gray" />
 
 
-  <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_below="@id/Teams"
-
-      android:id="@+id/scores">
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/scores"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/linear"
-        >
+        android:layout_height="match_parent"
+        android:layout_below="@id/Teams">
 
         <LinearLayout
+            android:id="@+id/linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <Button
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+6"
-                android:onClick="AddSixPointsA"
-                />
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="0dp"
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="AddSixPointsA"
+                    android:text="+6" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Touch"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="AddSixPointsB"
+                    android:text="+6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:textColor="@android:color/white"
-                android:textSize="24dp"
-                android:text="Touch"
+                android:orientation="horizontal">
 
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="AddThreePointsA"
+                    android:text="+3" />
 
-                />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="FieldGoal"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
 
-            <Button
-                android:layout_width="0dp"
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="AddThreePointsB"
+                    android:text="+3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+6"
-                android:onClick="AddSixPointsB"
-                />
+                android:orientation="horizontal">
 
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="AddOnePointA"
+                    android:text="+1" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="AddTwoPointsA"
+                    android:text="+2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="ExtraPoint"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="AddOnePointB"
+                    android:text="+1" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="AddTwoPointsB"
+                    android:text="+2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="SafetyA"
+                    android:text="+2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Safety"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="SafetyB"
+                    android:text="+2" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_below="@+id/scores"
+                android:background="@android:color/darker_gray" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    </RelativeLayout>
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+3"
-                android:onClick="AddThreePointsA"
-                />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:text="FieldGoal"
-                android:textColor="@android:color/white"
-                android:textSize="24dp"
-                />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+3"
-                android:onClick="AddThreePointsB"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+1"
-                android:onClick="AddOnePointA"
-                />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+2"
-                android:onClick="AddTwoPointsA"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:text="ExtraPoint"
-                android:textColor="@android:color/white"
-                android:textSize="16dp"/>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+1"
-                android:onClick="AddOnePointB"/>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+2"
-                android:onClick="AddTwoPointsB"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+2"
-                android:onClick="SafetyA"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:text="Safety"
-                android:textColor="@android:color/white"
-                android:textSize="20dp"/>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+2"
-                android:onClick="SafetyB"
-                />
-
-        </LinearLayout>
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="3dp"
-            android:background="@android:color/darker_gray"
-            android:layout_below="@+id/scores"/>
-    </LinearLayout>
-
-  </RelativeLayout>
     <View
         android:layout_width="wrap_content"
         android:layout_height="2dp"
-        android:background="@android:color/darker_gray"
-        android:layout_below="@+id/scores"/>
+        android:layout_below="@+id/scores"
+        android:background="@android:color/darker_gray" />
 
     <Button
         android:id="@+id/reset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="resetScore"
         android:text="reset"
         android:textAllCaps="true"
-        android:onClick="resetScore"
-        android:layout_alignParentBottom="true"
-
-
         />
 </RelativeLayout>
